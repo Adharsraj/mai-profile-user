@@ -1,11 +1,15 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
 
 
 
-export const AnimatedHamburgerButton = () => {
-  const [active, setActive] = useState(false);
+export const AnimatedHamburgerButton = ({open}:{open:boolean}) => {
+  console.log(open)
+  const [active, setActive] = useState(open);
+  useEffect(() => {
+    setActive(open);
+  }, [open]);
   return (
     <MotionConfig
       transition={{

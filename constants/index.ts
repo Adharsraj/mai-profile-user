@@ -23,3 +23,26 @@ export const featuresHome=[
     desc:"Affordable solutions tailored for individuals and businesses to enhance their online presence."
  },
 ]
+
+export const ourValues=[
+   {
+      id:1,
+      title:"Innovation",
+      desc:" We are committed to continuously innovating and staying at the forefront of technology to provide our customers with the most advanced NFC digital business card solutions."
+   },
+   {
+      id:2,
+      title:"Simplicity",
+      desc:"We believe in simplicity and ease of use. Our NFC digital business cards are designed to streamline networking processes, making it effortless for users to exchange information and connect with others."
+   },
+   {
+      id:3,
+      title:"Quality",
+      desc:" We prioritize quality in every aspect of our products and services. From the materials used to craft our NFC digital business cards to the functionality and reliability of our technology, we uphold the highest standards to ensure customer satisfaction."
+   },
+   {
+      id:4,
+      title:"Connection",
+      desc:"At the heart of our values lies the belief in the power of connection. We strive to facilitate meaningful connections between individuals by providing tools that enable seamless networking experiences with our  cards."
+   },
+  ]

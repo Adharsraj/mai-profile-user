@@ -1,55 +1,99 @@
 import Image from "next/image";
 import React from "react";
-import hero from "../../public/Images/hero/home.svg";
 import { Button } from "@/components/ui/button";
 import { featuresHome } from "@/constants";
 import { CircleUserRound } from "lucide-react";
-import howitworks from '../../public/Images/features/howitwork.svg'
+import howitworks from "../../public/Images/features/howitwork.svg";
+import Hero from "@/components/Hero";
+import TestimonialSliderCard from "@/components/Testimonials-slider-card";
+
 const Home = () => {
+  const heroProps = {
+    title: {
+      line1: "Empower",
+      line2: "Your Presence",
+    },
+    desc: "Enhance your professional presence with our innovative platform featuring streamlined portfolio creation and NFC digital visiting cards. Reduce the hassle with our intuitive tools.",
+    image: {
+      src: "/Images/hero/home.svg",
+      alt: "heroimage",
+    },
+    button:{
+      one:"Create your card",
+      two:"Learn more"      
+    }
+  };
+
+const testimonials = [
+  {
+    quote:"Mai Profile has completely transformed the way I present myself professionally. The portfolio maker allowed me to curate a visually appealing showcase of my work, while the NFC digital visiting cards have made networking effortless. Highly recommend!",
+    name: "Rose Roberson",
+    role: "CEO at Company",
+    imgSrc: "https://i.pravatar.cc/120?img=1",
+    rating:4,
+  },
+  {
+    quote:"Mai Profile has completely transformed the way I present myself professionally. The portfolio maker allowed me to curate a visually appealing showcase of my work, while the NFC digital visiting cards have made networking effortless. Highly recommend!",
+    name: "John",
+    role: "CEO at Company",
+    imgSrc: "https://i.pravatar.cc/120?img=2",
+    rating:3,
+  },
+  {
+    quote:"Mai Profile has completely transformed the way I present myself professionally. The portfolio maker allowed me to curate a visually appealing showcase of my work, while the NFC digital visiting cards have made networking effortless. Highly recommend!",
+    name: "Denver",
+    role: "CEO at Company",
+    imgSrc: "https://i.pravatar.cc/120?img=3",
+    rating:5,
+  },
+  // {
+  //   quote:
+  //     "Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation. Culpa consectetur dolor pariatur commodo aliqua amet tempor nisi enim deserunt elit cillum.",
+  //   name: "Chace Rodgers",
+  //   role: "CEO at Company",
+  //   imgSrc: "https://i.pravatar.cc/120?img=10",
+  // },
+  // {
+  //   quote:
+  //     "Id duis velit enim officia ad nisi incididunt magna ex dolor minim deserunt dolor.",
+  //   name: "Cornelius Sheppard",
+  //   role: "CEO at Company",
+  //   imgSrc: "https://i.pravatar.cc/120?img=9",
+  // },
+  // {
+  //   quote:
+  //     "Consectetur voluptate pariatur dolore laboris. Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation.",
+  //   name: "Chace Rodgers",
+  //   role: "CEO at Company",
+  //   imgSrc: "https://i.pravatar.cc/120?img=7",
+  // },
+  // {
+  //   quote:
+  //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptate pariatur dolore laboris. Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation.",
+  //   name: "Cornelius Sheppard",
+  //   role: "CEO at Company",
+  //   imgSrc: "https://i.pravatar.cc/120?img=8",
+  // },
+  // {
+  //   quote:
+  //     "Consectetur voluptate pariatur dolore laboris. Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation.",
+  //   name: "Chace Rodgers",
+  //   role: "CEO at Company",
+  //   imgSrc: "https://i.pravatar.cc/120?img=2",
+  // },
+  // {
+  //   quote:
+  //     "Id duis velit enim officia ad nisi incididunt magna ex dolor minim deserunt dolor.",
+  //   name: "Cornelius Sheppard",
+  //   role: "CEO at Company",
+  //   imgSrc: "https://i.pravatar.cc/120?img=3",
+  // },
+];
   return (
     <>
       {/* hero */}
-      <div className=" bg-primary-blue text-white font-concord pt-2 lg:pt-24 rounded-bl-[10vw] ">
-        <div className="px-2 max-w-[1400px] mx-auto lg:px-[10vw] md:px-[5vw]">
-          <div className="md:flex md:items-start">
-            <div>
-              <h1 className="text-4xl md:text-[42px] lg:text-6xl xl:whitespace-nowrap font-medium w-[250px]  md:w-full md:tracking-wide leading-[45px] md:leading-[50px] mx-auto md:mx-0">
-                Empower <br />
-                Your Presence
-              </h1>
-              <p className="text-[10px]  lg:text-[14px] md:text-[12px] w-[250px] lg:w-[90%] xl:w-[60%] lg:pt-2 font-normal mx-auto mt-2 md:mt-3 md:tracking-wide md:leading-4 lg:leading-6 leading-3 md:mx-0 md:w-[300px]">
-                Enhance your professional presence with our innovative platform
-                featuring streamlined portfolio creation and NFC digital
-                visiting cards. Reduce the hassle with our intuitive tools.
-              </p>
-              <div className="px-3 md:px-0 md:pt-6 md:pb-14 pt-4 lg:pt-8 lg:pb-40 hidden md:flex md:gap-3">
-                <Button className="bg-primary-yellow w-full md:w-auto h-9 text-[11.5px] lg:h-full lg:p-3 lg:text-lg font-normal tracking-wider">
-                  Create your card
-                </Button>
-                <span className="flex justify-center items-center text-sm pt-2 pb-1 tracking-wider text-[11.5px] lg:text-lg">
-                  Learn more
-                </span>
-              </div>
-            </div>
-            <Image
-              src={hero}
-              width={284}
-              height={190}
-              alt="hero"
-              className="mx-auto pt-4 md:pt-0 md:w-[358px] lg:w-[44vw] xl:max-w-[38vw] lg:mr-[-6.8vw]"
-            />
-          </div>
+      <Hero {...heroProps} />
 
-          <div className="px-3 pt-4 md:hidden">
-            <Button className="bg-primary-yellow w-full h-9 text-[11.5px] font-normal tracking-wider">
-              Create your card
-            </Button>
-            <span className="flex justify-center items-center text-sm pt-2 pb-1 tracking-wider text-[11.5px]">
-              Learn more
-            </span>
-          </div>
-        </div>
-      </div>
       {/* Features */}
       <div className="px-2 max-w-[1400px] mx-auto lg:pt-12 lg:px-[10vw] md:px-[5vw] pt-6 font-concord font-normal">
         <span className="bg-primary-blue lg:rounded-full lg:p-4  lg:w-32 lg:text-sm text-white p-2 mx-auto rounded-md justify-center flex w-16 text-xs  ">
@@ -102,7 +146,7 @@ const Home = () => {
         </h1>
       </div>
       {/* How it works */}
-      <div className="px-2 max-w-[1400px] mx-auto lg:pt-12 lg:px-[10vw] md:px-[5vw] pt-6 font-concord font-normal pb-16">
+      <div className="px-2 max-w-[1400px] overflow-hidden mx-auto lg:pt-12 lg:px-[10vw] md:px-[5vw] pt-6 font-concord font-normal pb-16">
         <span className="bg-primary-blue lg:rounded-full lg:p-4  lg:w-32 lg:text-sm text-white p-2 mx-auto rounded-md justify-center flex w-24 text-xs  ">
           How It Work{" "}
         </span>
@@ -110,7 +154,7 @@ const Home = () => {
           Work smarter <br />
           with easy access for user..{" "}
         </p>
-      
+
         <div className="flex text-[10px] md:text-base xl:text-[22px] lg:text-xl justify-around gap-2 pt-4">
           <span className="bg-primary-blue xl:p-7 xl:rounded-2xl xl:px-20 text-white p-2 md:p-4 md:px-8 lg:p-6          lg:px-14 whitespace-nowrap rounded-md">
             01. Create account
@@ -141,17 +185,28 @@ const Home = () => {
             </div>
 
             <div className="lg:flex lg:justify-end">
-              <Image src={howitworks} width={284} height={190} alt="hero" className="xl:w-3/4 lg:w-full" />
+              <Image
+                src={howitworks}
+                width={284}
+                height={190}
+                alt="hero"
+                className="xl:w-3/4 lg:w-full"
+              />
             </div>
-
           </div>
         </div>
       </div>
       {/* testimonial-content */}
-      <div>
-        <h1 className="bg-black h-[30vh] w-full text-center text-white flex justify-center items-center">
-          Testimonial
-        </h1>
+      <div className="bg-primary-blue">
+
+      <div className="px-2 max-w-[1400px]  relative overflow-hidden mx-auto lg:pt-12 lg:px-[10vw] md:px-[5vw] pt-6 font-concord font-normal ">
+        <span className="bg-primary-yellow lg:rounded-full lg:p-4 xl:mt-24  lg:w-32 lg:text-sm xl:mb-5 text-black p-2 mb-2 mx-auto rounded-md justify-center flex w-24 text-xs  ">
+          Testimonial{" "}
+        </span>
+        <p className="text-xl text-white text-center mx-auto w-full pb-5 xl:pb-8 lg:text-2xl xl:text-4xl">Trusted by millions of customers.</p>
+        <p className="text-white text-[72px] xl:text-[80px] absolute top-[36%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:top-[42%]  ">“</p>
+              <TestimonialSliderCard testimonials={testimonials}/>
+      </div>
       </div>
     </>
   );

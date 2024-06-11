@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import { ViewTransitions } from "next-view-transitions";
 
 const concord = localFont({
   src: [
@@ -33,8 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={concord.variable}>{children}</body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body className={concord.variable}>{children}</body>
+      </html>
+    </ViewTransitions>
   );
 }
