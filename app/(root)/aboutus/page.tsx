@@ -80,7 +80,7 @@ const AboutUs = () => {
                   height={130}
                   alt="aplus"
                   priority={true}
-                  className="mx-auto mb-2 sm:hidden md:flex lg:hidden  absolute top-[20%] -right-16 overflow-hidden"
+                  className="mx-auto mb-2 hidden md:flex lg:hidden  absolute top-[20%] -right-16 overflow-hidden"
                 />
 
                  <Image
@@ -89,7 +89,7 @@ const AboutUs = () => {
                   height={130}
                   alt="aplus"
                   priority={true}
-                  className="mx-auto mb-2 sm:hidden md:flex xl:w-[365px] xl:-top-12 absolute -top-20 -right-24 xl:right-0 overflow-hidden"
+                  className="mx-auto mb-2 hidden md:flex xl:w-[365px] xl:-top-12 absolute -top-20 -right-24 xl:right-0 overflow-hidden"
                 />
               </div>
             </div>

@@ -6,6 +6,7 @@ import { CircleUserRound } from "lucide-react";
 import howitworks from "../../public/Images/features/howitwork.svg";
 import Hero from "@/components/Hero";
 import TestimonialSliderCard from "@/components/Testimonials-slider-card";
+import CarouselSlider from "@/components/Carousel-Slider";
 
 const Home = () => {
   const heroProps = {
@@ -46,48 +47,36 @@ const testimonials = [
     imgSrc: "https://i.pravatar.cc/120?img=3",
     rating:5,
   },
-  // {
-  //   quote:
-  //     "Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation. Culpa consectetur dolor pariatur commodo aliqua amet tempor nisi enim deserunt elit cillum.",
-  //   name: "Chace Rodgers",
-  //   role: "CEO at Company",
-  //   imgSrc: "https://i.pravatar.cc/120?img=10",
-  // },
-  // {
-  //   quote:
-  //     "Id duis velit enim officia ad nisi incididunt magna ex dolor minim deserunt dolor.",
-  //   name: "Cornelius Sheppard",
-  //   role: "CEO at Company",
-  //   imgSrc: "https://i.pravatar.cc/120?img=9",
-  // },
-  // {
-  //   quote:
-  //     "Consectetur voluptate pariatur dolore laboris. Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation.",
-  //   name: "Chace Rodgers",
-  //   role: "CEO at Company",
-  //   imgSrc: "https://i.pravatar.cc/120?img=7",
-  // },
-  // {
-  //   quote:
-  //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptate pariatur dolore laboris. Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation.",
-  //   name: "Cornelius Sheppard",
-  //   role: "CEO at Company",
-  //   imgSrc: "https://i.pravatar.cc/120?img=8",
-  // },
-  // {
-  //   quote:
-  //     "Consectetur voluptate pariatur dolore laboris. Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation.",
-  //   name: "Chace Rodgers",
-  //   role: "CEO at Company",
-  //   imgSrc: "https://i.pravatar.cc/120?img=2",
-  // },
-  // {
-  //   quote:
-  //     "Id duis velit enim officia ad nisi incididunt magna ex dolor minim deserunt dolor.",
-  //   name: "Cornelius Sheppard",
-  //   role: "CEO at Company",
-  //   imgSrc: "https://i.pravatar.cc/120?img=3",
-  // },
+
+];
+
+const carouselSlideContent = [
+  {
+    quote:"With drag-and-drop functionality, adding images, videos, text, and links is easier than ever.",
+    name: "Streamlined Portfolio Creation: Showcase Your Best Work with Ease",
+    role: "CEO at Company",
+    imgSrc: "/Images/carousel/split-1.svg",
+
+    rating:4,
+  },
+  {
+    quote:"Our NFC digital visiting cards leverage cutting-edge technology to enable seamless contact sharing and dynamic content updates.",
+    name: "NFC Digital Visiting Cards: Revolutionize Networking with a Single Tap",
+    role: "CEO at Company",
+    imgSrc: "/Images/carousel/split-2.svg",
+
+    rating:4,
+  },
+  {
+    quote:"With our user-friendly platform, you can effortlessly showcase your skills, while our innovative NFC technology simplifies networking with just a tap.",
+    name: "Why Choose Maiprofile ?",
+    role: "CEO at Company",
+    imgSrc: "/Images/carousel/split-3.svg",
+
+    rating:4,
+  },
+  
+
 ];
   return (
     <>
@@ -140,13 +129,15 @@ const testimonials = [
         </div>
       </div>
       {/* Carousel-content */}
-      <div>
-        <h1 className="bg-black h-[30vh] w-full text-center text-white flex justify-center items-center">
-          Carousel
-        </h1>
-      </div>
+      
+
+      <div className=" max-w-[1600px] overflow-hidden mx-auto lg:pl-[10vw] md:pl-[5vw]  lg:pt-12 pt-6 font-concord font-normal pb-16">
+      <CarouselSlider testimonials={carouselSlideContent}/>
+
+        </div>
       {/* How it works */}
       <div className="px-2 max-w-[1400px] overflow-hidden mx-auto lg:pt-12 lg:px-[10vw] md:px-[5vw] pt-6 font-concord font-normal pb-16">
+      
         <span className="bg-primary-blue lg:rounded-full lg:p-4  lg:w-32 lg:text-sm text-white p-2 mx-auto rounded-md justify-center flex w-24 text-xs  ">
           How It Work{" "}
         </span>
