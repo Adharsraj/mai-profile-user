@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Blogpage from "@/components/Blogpage";
 import React from "react";
 
 const Blog = () => {
@@ -18,6 +19,7 @@ const Blog = () => {
   return (
     <div>
       <Hero {...heroProps} />
+      <Blogpage/>
     </div>
   );
 };
