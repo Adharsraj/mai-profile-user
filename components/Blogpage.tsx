@@ -37,28 +37,28 @@ const Blogpage: React.FC = () => {
         <div className="text-center">
           <img src="/images/blog/grid1.svg" alt="Grid 1" className="w-full h-auto rounded-lg" />
           <h3 className="text-lg sm:text-md w-[200px] font-bold mt-2 lg:w-[220px] mx-auto mt-2">Mai Profile News Letter 2024</h3>
-          <p className="text-black-600 mb-4 text-sm mt-2 sm:w-[200px]">Over the past few months we have been work hard at work adding new features to mai profile.</p>
+          <p className="text-black-600 mb-4 text-sm mt-2 ">Over the past few months we have been work hard at work adding new features to mai profile.</p>
         </div>
 
         <div className="text-center">
           <img src="/images/blog/grid2.svg" alt="Grid 2" className="w-full h-auto rounded-lg" />
           <h3 className="text-lg sm:text-md font-bold mt-2 lg:w-[300px] mx-auto mt-2">what is the correct approach to Business Networking ?</h3>
-          <p className="text-black-600 mb-4 text-sm sm:text-base lg:text-sm mt-2">Networking isn't just for you. It's also for your business. Learn how to master business Networking.</p>
+          <p className="text-black-600 mb-4 text-sm mt-2 ">Networking isn't just for you. It's also for your business. Learn how to master business Networking.</p>
         </div>
         <div className="text-center">
           <img src="/images/blog/grid3.svg" alt="Grid 3" className="w-full h-auto rounded-lg" />
           <h3 className="text-lg sm:text-md font-bold mt-2 lg:w-[220px] mx-auto mt-2">How to Create a Virtual Background</h3>
-          <p className="text-black-600 mb-4 text-sm sm:text-base lg:text-sm mt-2">Learn how to create your own custom, professional virtual background for free with Mai profile.</p>
+          <p className="text-black-600 mb-4 text-sm mt-2 ">Learn how to create your own custom, professional virtual background for free with Mai profile.</p>
         </div>
         <div className="text-center">
           <img src="/images/blog/grid4.svg" alt="Grid 4" className="w-full h-auto rounded-lg" />
           <h3 className="text-lg sm:text-md font-bold mt-2 lg:w-[350px] mx-auto">Want to meet people faster? Use this QR code Generator and Reader</h3>
-          <p className="text-black-600 mb-4 text-sm sm:text-base lg:text-sm mt-2">QR codes are popping up everywhere. Learn why they are so popular, how they work, and which QR code generator and reader use while networking.</p>
+          <p className="text-black-600 mb-4 text-sm mt-2 ">QR codes are popping up everywhere. Learn why they are so popular, how they work, and which QR code generator and reader use while networking.</p>
         </div>
         <div className="text-center">
           <img src="/images/blog/grid5.svg" alt="Grid 5" className="w-full h-auto rounded-lg" />
           <h3 className="text-lg sm:text-md font-bold mt-2 lg:w-[330px] mx-auto mt-2">How To Use a Virtual Background With Skype</h3>
-          <p className="text-black-600 mb-4 text-sm sm:text-base lg:text-sm mt-2">Joining a Skype call? Learn how to create and use a virtual background in Skype with these four steps.</p>
+          <p className="text-black-600 mb-4 text-sm mt-2 ">Joining a Skype call? Learn how to create and use a virtual background in Skype with these four steps.</p>
         </div>
       </div>
     </div>
