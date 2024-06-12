@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Blogpage from "@/components/Blogpage";
 import React from "react";
+import { SignupFormDemo } from "@/components/ContactForm";
 
 const Blog = () => {
   const heroProps = {
@@ -20,7 +21,9 @@ const Blog = () => {
     <div>
       <Hero {...heroProps} />
       <Blogpage/>
-    </div>
+      <div className="bg-primary-blue">
+        <SignupFormDemo />
+      </div>    </div>
   );
 };
 
