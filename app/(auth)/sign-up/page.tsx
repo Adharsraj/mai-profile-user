@@ -1,7 +1,10 @@
-import React from "react";
+import React from 'react'
+import Create from '@/components/Create'
 
 const SignUp = () => {
-  return <div>Sign-Up</div>;
-};
+  return (
+    <Create/>
+  )
+}
 
-export default SignUp;
+export default SignUp
