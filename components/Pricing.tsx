@@ -65,7 +65,7 @@ const PricingCard = ({
     )}
   >
     <div>
-      <CardHeader className="pb-8 pt-4 ">
+      <CardHeader className="pb-4 pt-4 ">
         {isYearly && yearlyPrice && monthlyPrice ? (
           <div className="flex justify-between">
             <CardTitle className=" text-xl text-center">{title}</CardTitle>
@@ -85,19 +85,19 @@ const PricingCard = ({
           <CardTitle className=" md:text-2xl text-xl pt-4 text-center md:text-left">{title}</CardTitle>
         )}
         <CardDescription
-          className={cn("md:pt-1.5 md:h-12  text-black text-sm  md:text-lg text-center md:text-left  leading-4", {
+          className={cn("md:pt-1.5 md:h-12  text-black text-sm  md:text-lg text-center md:text-left   leading-4", {
             "text-white": exclusive,
           })}
         >
           {description}
         </CardDescription>
 
-        <div className="flex gap-0.5">
-          <h3 className="text-4xl font-bold">
+        <div className="flex gap-0.5 pt-5">
+          <p className="text-4xl font-bold">
             {monthlyPrice ?
               "₹" + monthlyPrice :"₹" + monthlyPrice
             }
-          </h3>
+          </p>
           <span className="flex flex-col justify-end text-sm mb-1">
             { monthlyPrice ? "/month" : "/month"}
           </span>
@@ -121,7 +121,7 @@ const PricingCard = ({
 );
 
 const CheckItem = ({ text }: { text: string }) => (
-  <div className="flex gap-2 pb-3">
+  <div className="flex gap-2 ">
     <CheckCircle2 size={22} className="my-auto" />
     <p className=" flex-1  md:text-lg leading-5  text-sm  ">{text}</p>
   </div>

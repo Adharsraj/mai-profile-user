@@ -143,10 +143,10 @@ const Pricing = () => {
                 {m.map((item,index) => (
                   <p
                     key={index}
-                    className={`text-center h-16 border-b flex items-center justify-center ${item[column.key] ? `text-${column.color}-600` : ''}`}
+                    className={`text-center h-16  border-b flex items-center justify-center ${item[column.key] ? `text-${column.color}-600` : ''}`}
                   >
                     {item[column?.key] ? (
-                      <span className={`w-5 h-5 inline-flex items-center justify-center bg-${column.color}-500 text-white rounded-full flex-shrink-0`}>
+                      <span className={`w-5 h-5 inline-flex  items-center justify-center bg-green-500 text-white rounded-full flex-shrink-0`}>
                         <svg
                           fill="none"
                           stroke="currentColor"

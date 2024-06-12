@@ -55,7 +55,7 @@ export default function CarouselSlider({
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="relative">
                   <div className="">
-                    <div className="px-2 xl:max-w-[1200px]">
+                    <div className="px-2 xl:max-w-[800px]">
                       <div className="text-sm max-w-[280px] md:max-w-[420px] lg:max-w-[55vw] xl:max-w-[48vw] px-3 xl:px-10 rounded-xl md:rounded-2xl xl:rounded-[40px] md:min-h-[280px] lg:min-h-[380px] xl:min-h-[530px] bg-[#F9F9F9]">
                         <p className="leading-4 pb-2 max-w-[180px] md:text-2xl lg:text-3xl xl:text-4xl xl:max-w-[450px] md:leading-6 md:max-w-[300px] lg:max-w-[400px] text-[12px] pt-16 xl:pt-36">
                           {testimonial.name}
@@ -97,9 +97,7 @@ export default function CarouselSlider({
                 ></p>
               ))}
             </div>
-            <div className="absolute bottom-4 right-4 text-primary-blue">
-              {`Slide ${activeIndex + 1} of ${testimonials.length}`}
-            </div>
+          
             <div>
               <CarouselPrevious className="absolute xl:h-10 xl:w-10 left-4 xl:left-9 top-[200px] lg:top-[290px] md:top-[220px] xl:top-[380px] border-none bg-transparent text-primary-blue" />
               <CarouselNext className="absolute left-9 xl:left-16 top-[200px] md:top-[220px] lg:top-[290px] border-none bg-transparent xl:top-[380px] text-primary-blue" />

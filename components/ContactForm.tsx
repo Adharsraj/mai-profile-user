@@ -4,6 +4,8 @@ import React from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
+import { rings } from "@/constants/SvgComponents";
+import Image from "next/image";
 
 export function SignupFormDemo() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,12 +13,13 @@ export function SignupFormDemo() {
     console.log("Form submitted");
   };
   return (
-    
-    <div className="max-w-[54rem] w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8  bg-primary-blue  dark:bg-black">
+    <div className="relative">
+
+    <div className="max-w-[54rem] w-full mx-auto  rounded-none md:rounded-2xl p-4 md:p-8  bg-primary-blue  dark:bg-black z-50">
       <h2 className="font-bold text-xl md:text-2xl lg:text-4xl xl:pt-7 md:pb-6 text-center text-white">
         Get in touch with us{" "}
       </h2>
-      <form className="my-2" onSubmit={handleSubmit}>
+      <form className="my-2 relative z-40" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4 sm:hidden">
           <Label htmlFor="name">Full Name</Label>
           <Input id="name" placeholder="full name" type="text" />
@@ -42,7 +45,7 @@ export function SignupFormDemo() {
           </LabelInputContainer>
         </div>
 
-        <LabelInputContainer className="mb-4">
+        <LabelInputContainer className="mb-4 z-30">
           <Label htmlFor="job">Job Title</Label>
           <Input id="job" placeholder="Job Title" type="text" />
         </LabelInputContainer>
@@ -52,7 +55,7 @@ export function SignupFormDemo() {
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="url">Number of employees at the company</Label>
-          <Input id="url" placeholder="Number of employees" type="text" />
+          <Input  id="url" placeholder="Number of employees" type="text" />
         </LabelInputContainer>
         <button
           className="bg-gradient-to-br md:max-w-[130px] flex justify-center items-center mx-auto relative group/btn bg-primary-yellow w-full text-white rounded-md h-12 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
@@ -63,6 +66,19 @@ export function SignupFormDemo() {
         </button>
       </form>
     </div>
+    <div className="">
+        <div className="absolute -top-[40%] left-0 max-w-[400px]  ">
+          <Image
+            className="hidden md:flex w-[15vw] "
+            src={rings.rightCut}
+            width={80}
+            height={100}
+            alt="phone"
+          />
+        </div>{" "}
+      </div>
+    </div>
+
   );
 }
 

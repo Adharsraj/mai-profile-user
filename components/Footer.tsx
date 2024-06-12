@@ -3,13 +3,22 @@ import React from "react";
 import tLogo from "../public/transparentLogo.svg";
 import mailIcon from "../public/Images/footer/mail.svg";
 import phoneIcon from "../public/Images/footer/phone-call.svg";
+import { rings } from "@/constants/SvgComponents";
 
 const Footer = () => {
   return (
-    <div className="pt-4 px-4 md:px-[10vw]  max-w-[1400px] mx-auto lg:pt-28 pb-40 font-concord ">
+    <div className="relative">
+
+    <div className="pt-4 px-4 md:px-[10vw] overflow-auto  max-w-[1400px] mx-auto lg:pt-28 pb-10 font-concord  ">
       <div className="lg:flex">
         <div className="">
-          <Image className="lg:w-52" src={tLogo} width={180} height={100} alt="logo" />
+          <Image
+            className="lg:w-52"
+            src={tLogo}
+            width={180}
+            height={100}
+            alt="logo"
+          />
           <div>
             <p className="text-[#797979] text-[10px] lg:text-[16px]  lg:leading-[28px] pt-3 lg:pt-5 max-w-sm lg:max-w-[265px] md:leading-[18px]">
               With our affordable solutions, you can make a lasting impression
@@ -82,7 +91,20 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="">
+        <div className="absolute xl:top-[-115%] md:top-[-60%] lg:top-[-65%] right-0 max-w-[400px]  ">
+          <Image
+            className="hidden md:flex w-[27vw] "
+            src={rings.cutRing}
+            width={80}
+            height={100}
+            alt="phone"
+          />
+        </div>{" "}
+      </div>
     </div>
+    </div>
+
   );
 };
 
