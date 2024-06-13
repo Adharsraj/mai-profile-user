@@ -15,7 +15,7 @@ const Login = () => {
         password: "",
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e:any) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
@@ -23,7 +23,7 @@ const Login = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e:any) => {
         e.preventDefault();
         console.log(formData);
     };

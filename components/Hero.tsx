@@ -37,7 +37,7 @@ const Hero = ({ title, desc, image, button }: HeroProps) => {
             height={190}
             alt={image.alt}
             priority={true}
-            className="mx-auto pt-4 md:pt-0 md:w-[358px] max-h-[360px] lg:mb-32  md:mb-28 lg:w-[44vw] xl:max-w-[38vw] lg:mr-[-6.8vw]"
+            className="mx-auto pt-4 md:pt-0 md:w-[358px] max-h-[360px] lg:mb-32  md:mb-14 lg:w-[44vw] xl:max-w-[38vw] lg:mr-[-6.8vw]"
           />
         </div>
         <div className="px-3 pt-4 md:hidden">

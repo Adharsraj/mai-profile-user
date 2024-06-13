@@ -38,7 +38,7 @@ export default function CarouselSlider({
 
   return (
     <>
-      <section className="w-full py-4">
+      <section className="w-full ">
         <div className="">
           <Carousel
             opts={{

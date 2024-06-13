@@ -18,7 +18,7 @@ const Create = () => {
     confirmPassword: ""
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -26,7 +26,7 @@ const Create = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     console.log(formData);
   };

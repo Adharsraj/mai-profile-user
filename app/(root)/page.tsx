@@ -8,6 +8,7 @@ import Hero from "@/components/Hero";
 import TestimonialSliderCard from "@/components/Testimonials-slider-card";
 import CarouselSlider from "@/components/Carousel-Slider";
 import { rings } from "@/constants/SvgComponents";
+import HowItWorkSlider from "@/components/HowItWorkSlider";
 
 const Home = () => {
   const heroProps = {
@@ -89,7 +90,7 @@ const Home = () => {
 
       {/* Features */}
       <div className="px-2 max-w-[1400px] mx-auto lg:pt-12 lg:px-[10vw] md:px-[5vw] pt-6 font-concord font-normal">
-        <span className="bg-primary-blue lg:rounded-full lg:p-4  lg:w-32 lg:text-sm text-white p-2 mx-auto rounded-md justify-center flex w-16 text-xs  ">
+        <span className="bg-primary-blue lg:rounded-full lg:p-4  lg:w-32 lg:text-sm text-white p-2 mx-auto rounded-md justify-center  flex w-16 text-xs  ">
           Features
         </span>
         <p className="text-[20px] font-medium text-[#242331] px-4 tracking-wide lg:pt-6 lg:pb-10 md:text-2xl lg:text-4xl  md:leading-6 text-center md:mb-10 leading-5 pt-2">
@@ -134,64 +135,12 @@ const Home = () => {
       </div>
       {/* Carousel-content */}
 
-      <div className=" max-w-[1600px] overflow-hidden mx-auto lg:pl-[10vw] md:pl-[5vw]  lg:pt-12 pt-6 font-concord font-normal pb-16">
+      <div className=" max-w-[1600px] overflow-hidden mx-auto lg:pl-[10vw] xl:pt-32 xl:pb-6 md:pl-[5vw]  lg:pt-12 pt-6 font-concord font-normal ">
         <CarouselSlider testimonials={carouselSlideContent} />
       </div>
       {/* How it works */}
       <div className="relative">
-        <div className="px-2 max-w-[1400px]  overflow-hidden mx-auto lg:pt-12 lg:px-[10vw] md:px-[5vw] pt-6 font-concord font-normal pb-16">
-          <span className="bg-primary-blue lg:rounded-full lg:p-4  lg:w-32 lg:text-sm text-white p-2 mx-auto rounded-md justify-center flex w-24 text-xs  ">
-            How It Work{" "}
-          </span>
-          <p className="text-[20px] font-medium text-primary-blue px-4 tracking-wide lg:pt-6 lg:pb-1 md:text-2xl lg:text-4xl  md:leading-6 text-center md:mb-5 leading-5 pt-2">
-            Work smarter <br />
-            with easy access for user..{" "}
-          </p>
-
-          <div className="flex text-[10px] md:text-base xl:text-[22px] lg:text-xl justify-around gap-2 pt-4">
-            <span className="bg-primary-blue z-40 xl:p-7 xl:rounded-2xl xl:px-20 text-white p-2 md:p-4 md:px-8 lg:p-6          lg:px-14 whitespace-nowrap rounded-md">
-              01. Create account
-            </span>
-            <span className="bg-[#F9F9F9] p-2 xl:p-7 xl:rounded-2xl xl:px-20 md:p-4 md:px-8 lg:p-6 lg:px-14  whitespace-nowrap rounded-md  ">
-              02. Enter your details
-            </span>
-            <span className="bg-[#F9F9F9] p-2 xl:p-7 xl:rounded-2xl xl:px-20 md:p-4 md:px-8 lg:p-6 lg:px-14  whitespace-nowrap rounded-md">
-              03. Share the Link
-            </span>
-          </div>
-          <div className="relative z-10 bg-white">
-
-          <div className="pt-10 lg:pt-16 ">
-            <div className="flex justify-center md:justify-between items-start md:px-4 lg:px-14">
-              <div className="relative z-10">
-                <div className="flex gap-2 md:gap-4 lg:gap-6  items-center">
-                  <CircleUserRound className="w-7 h-7 md:w-14 md:h-14 lg:w-16  lg:h-16 text-primary-blue" />
-                  <span className="text-lg z-40 bg-white  leading-5 md:text-xl lg:text-3xl lg:leading-8  md:leading-5">
-                    Create your account <br />& start your work
-                  </span>
-                </div>
-                <p className="text-[10px] z-40 bg-white text-[#797979] pt-2 pb-3 lg:pt-8 lg:pb-10 lg:text-base lg:w-[380px] xl:w-[430px] md:w-[300px] md:pb-5 md:text-[12px]">
-                  Creating an account is your gateway to unlocking a world of
-                  professional networking possibilities.
-                </p>
-                <span className="bg-primary-blue z-50 text-white p-2 md:text-sm lg:p-4 lg:px-9   rounded-lg lg:rounded-full text-[10px]">
-                  Get started
-                </span>
-              </div>
-
-              <div className="lg:flex lg:justify-end relative z-10">
-                <Image
-                  src={howitworks}
-                  width={284}
-                  height={190}
-                  alt="hero"
-                  className="xl:w-3/4 lg:w-full"
-                />
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
+      <HowItWorkSlider/>
         {/* testimonial-content */}
         <div className="bg-primary-blue">
           <div className="px-2 max-w-[1400px]   relative overflow-hidden mx-auto lg:pt-12 lg:px-[10vw] md:px-[5vw] pt-6 font-concord font-normal ">

@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="relative">
 
-    <div className="pt-4 px-4 md:px-[10vw] overflow-auto  max-w-[1400px] mx-auto lg:pt-28 pb-10 font-concord  ">
+    <div className="pt-4 px-4 md:px-[10vw] overflow-auto  max-w-[1400px] mx-auto lg:pt-16 pb-10 font-concord  ">
       <div className="lg:flex">
         <div className="">
           <Image
@@ -92,9 +92,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="">
-        <div className="absolute xl:top-[-115%] md:top-[-60%] lg:top-[-65%] right-0 max-w-[400px]  ">
+        <div className="absolute xl:top-[-130%] md:top-[-60%] lg:top-[-65%] right-0 max-w-[400px]  ">
           <Image
-            className="hidden md:flex w-[27vw] "
+            className="hidden md:flex w-[27vw] xl:w-[25vw] "
             src={rings.cutRing}
             width={80}
             height={100}
