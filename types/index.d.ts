@@ -20,3 +20,21 @@ interface HeroProps {
     two:string;
   };
 }
+
+interface AuthProps {
+  // title: {
+  //   line1?: string;
+  //   line2?: string;
+  //   line3?: string;
+  // };
+  text: string;
+  linkPath:string;
+  // image: {
+  //   src: string;
+  //   alt: string;
+  // };
+  // button?:{
+  //   one:string;
+  //   two:string;
+  // };
+}

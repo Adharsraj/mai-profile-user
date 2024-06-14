@@ -67,10 +67,12 @@ const Header = () => {
           <Button className="uppercase border border-primary-yellow font-normal bg-transparent text-xs hidden lg:flex h-8">
             Create your card
           </Button>
-
+          <Link href="/sign-in" passHref>
           <Button className="bg-primary-yellow uppercase w-14 md:w-16 font-normal text-xs h-8">
             Login
           </Button>
+          </Link>
+
         </div>
       </div>
       <AnimatePresence>
@@ -122,13 +124,16 @@ const Header = () => {
                     </ul>
                   </Link>
                 </div>
+              
+
                 <Button className="uppercase border bg-primary-yellow w-full font-normal h-12 mb-2 ">
                   Create your card
                 </Button>
-
+                <Link href="/sign-in" passHref>
                 <Button className="bg-transparent border border-primary-blue text-primary-blue uppercase w-full  font-normal h-12 mb-2 ">
                   Login
                 </Button>
+                  </Link>
               </div>
             </motion.div>
             <style jsx global>{`

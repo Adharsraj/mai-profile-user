@@ -7,73 +7,29 @@ import fbLogo from "../public/Images/extras/fblogo.svg";
 import twitter from "../public/Images/extras/twitter.svg";
 import { MaxWidthWrapper } from "@/components/ui/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
+import { Input } from "./ui/input";
 
 
 const Create = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: ""
-  });
 
-  const handleChange = (e:any) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e:any) => {
-    e.preventDefault();
-    console.log(formData);
-  };
+ 
 
   return (
     <MaxWidthWrapper className="">
-      <div className="flex justify-between pt-3 md:pt-6 pb-4">
-        <div className="gap-1">
-          <div className="lg:hidden">
-            <Image
-              src={transparentLogo}
-              width={120}
-              height={60}
-              alt="transparentLogo"
-              className="bg-transparent"
-            />
-          </div>
-          <div className="hidden lg:block">
-            <Image
-              src={transparentLogo}
-              width={160}
-              height={80}
-              alt="transparentLogo"
-              className="lg:w-[240px] bg-transparent"
-            />
-          </div>
-        </div>
-        <div className="hidden lg:block lg:text-right lg:w-1/2 lg:pr-8 mt-6">
-    <span>Already have an account? <a href="#" className="text-blue-600">Login</a></span>
-  </div>
-  <div className="block lg:hidden text-center mt-2 text-[8px]">
-    <span>Already have an account? <a href="#" className="text-blue-600 text-[9px]">Login</a></span>
-  </div>
-      </div>
+    
 
-      <div className="mt-6 lg:flex lg:justify-between lg:items-start">
+      <div className="mt-3 lg:flex lg:justify-between lg:items-start">
         <div className="lg:w-1/2 lg:pr-8">
-          <div className="flex justify-center lg:hidden mb-6">
+          <div className="flex justify-center items-center ">
             <Image
               src="/Images/extras/sign.svg"
-              alt="Your Image"
+              alt="rightImage"
               width={200}
               height={200}
             />
           </div>
           <h1 className="text-2xl font-bold mb-2 text-center lg:text-left">Create Account</h1>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-2">
+
             <div className="w-full">
               <div className="mb-2 hidden lg:flex flex-col md:flex-row items-center justify-center md:justify-start gap-4">
                 <Button className="flex items-center justify-center bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100 mr-2">
@@ -96,57 +52,13 @@ const Create = () => {
               </div>
               <div className="text-gray-500 hidden lg:inline lg:ml-[200px]">OR</div>
             </div>
-            <div className="flex flex-col md:flex-row md:gap-4">
-              <div className="w-full md:w-1/2">
-                <input
+            <Input
                   type="text"
-                  id="firstName"
                   name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
                   required
                   placeholder="First Name"
-                  className="mt-4 p-2 border-b border-gray-300 outline-none w-full md:w-48 placeholder-black"
+                  className="bg-white  border border-b border-t-0 border-x-0 shadow-none"
                 />
-              </div>
-              <div className="w-full md:w-1/2">
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  required
-                  placeholder="Last Name"
-                  className="mt-4 p-2 border-b border-gray-300 outline-none w-full md:w-48 placeholder-black"
-                />
-              </div>
-            </div>
-
-            <div className="">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="Email"
-                className="mt-2 p-2 border-b border-gray-300 outline-none w-full md:w-48 placeholder-black"
-              />
-            </div>
-            <div className="">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-                placeholder="Password"
-                className="mt-1 p-2 border-b border-gray-300 outline-none w-full md:w-48 placeholder-black"
-              />
-            </div>
             <div className="flex justify-center lg:justify-start">
               <button type="submit" className="bg-primary-blue text-white w-full lg:w-auto lg:px-8 h-[50px] rounded-md md:hover:bg-blue-600 ">
                 Create Account
@@ -170,7 +82,6 @@ const Create = () => {
                 <Image src={fbLogo} alt="Facebook Logo" width={25} height={25} className="rounded-full" />
               </Button>
             </div>
-          </form>
         </div>
         <div className="hidden lg:flex lg:items-start lg:justify-end lg:w-1/2 lg:mt-[100px]">
           <Image

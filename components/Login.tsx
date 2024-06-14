@@ -30,34 +30,7 @@ const Login = () => {
 
     return (
         <MaxWidthWrapper className="">
-            <div className="flex justify-between pt-3 md:pt-6 pb-4">
-                <div className="gap-1">
-                    <div className="lg:hidden">
-                        <Image
-                            src={transparentLogo}
-                            width={120}
-                            height={60}
-                            alt="transparentlogo"
-                            className="bg-transparent"
-                        />
-                    </div>
-                    <div className="hidden lg:block">
-                        <Image
-                            src={transparentLogo}
-                            width={160}
-                            height={80}
-                            alt="transparentlogo"
-                            className="lg:w-[240px] bg-transparent"
-                        />
-                    </div>
-                </div>
-                <div className="hidden lg:block lg:text-right lg:w-1/2 lg:pr-8 mt-6">
-                    <span>Don't Have an account <a href="#" className="text-blue-600">Create one</a></span>
-                </div>
-                <div className="block lg:hidden text-center mt-2 text-[8px]">
-                    <span>Don't Have an account <a href="#" className="text-blue-600 text-[9px]">Create one</a></span>
-                </div>
-            </div>
+           
 
             <div className="mt-6 lg:flex lg:justify-between lg:items-start">
                 <div className="lg:w-1/2 lg:pr-8">
