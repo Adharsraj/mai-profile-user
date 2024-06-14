@@ -85,7 +85,7 @@ const InnerBlog: React.FC = () => {
                     </div>
                 </div>
                 <div className="text-gray-600 my-2">
-                    <p className='text-xs sm:text-sm'><span className="font-bold text-xs sm:text-sm">Originally Published:</span> {currentDate} - 2 min read</p>
+                    <p className='text-xs sm:text-sm'><span className="font-bold text-xs sm:text-sm">Orientally Published:</span> {currentDate} - 2 min read</p>
                     <p className='text-xs sm:text-sm'>{lastUpdated}</p>
                 </div>
 
