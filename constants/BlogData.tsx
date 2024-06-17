@@ -1,4 +1,3 @@
-
 export const blogCards = [
   {
     id: "0",
@@ -7,7 +6,17 @@ export const blogCards = [
     title: "Mai Profile News Letter 2024",
     description:
       "Over the past few months we have been hard at work adding new features to mai profile.",
-    titleWidth: "w-[220px]",
+    titleWidth: "w-[180px]",
+    author: {
+      name: "Anna Philip",
+      designation: "Senior Writer",
+      imageUrl: "/images/blog/anna.jpeg",
+    },
+    publishedDate: "16th June 2023",
+    readTime: "5 min read",
+    lastUpdatedDate: "16th June 2024",
+    newsPlace: "New York",
+    happenedDate: "15th June 2023",
   },
   {
     id: "1",
@@ -17,6 +26,16 @@ export const blogCards = [
     description:
       "Networking isn't just for you. It's also for your business. Learn how to master business Networking.",
     titleWidth: "w-[300px]",
+    author: {
+      name: "John Doe",
+      designation: "Networking Expert",
+      imageUrl: "/images/blog/john.jpeg",
+    },
+    publishedDate: "12th May 2023",
+    readTime: "7 min read",
+    lastUpdatedDate: "16th June 2024",
+    newsPlace: "London",
+    happenedDate: "11th May 2023",
   },
   {
     id: "2",
@@ -25,7 +44,17 @@ export const blogCards = [
     title: "How to Create a Virtual Background",
     description:
       "Learn how to create your own custom, professional virtual background for free with Mai profile.",
-    titleWidth: "w-[220px]",
+    titleWidth: "w-[180px]",
+    author: {
+      name: "Emily Smith",
+      designation: "Tech Writer",
+      imageUrl: "/images/blog/emily.jpeg",
+    },
+    publishedDate: "10th April 2023",
+    readTime: "6 min read",
+    lastUpdatedDate: "16th June 2024",
+    newsPlace: "San Francisco",
+    happenedDate: "9th April 2023",
   },
   {
     id: "3",
@@ -35,6 +64,16 @@ export const blogCards = [
     description:
       "QR codes are popping up everywhere. Learn why they are so popular, how they work, and which QR code generator and reader use while networking.",
     titleWidth: "w-[310px]",
+    author: {
+      name: "Michael Johnson",
+      designation: "Digital Marketer",
+      imageUrl: "/images/blog/michael.avif",
+    },
+    publishedDate: "8th March 2023",
+    readTime: "8 min read",
+    lastUpdatedDate: "16th June 2024",
+    newsPlace: "Berlin",
+    happenedDate: "7th March 2023",
   },
   {
     id: "4",
@@ -44,5 +83,15 @@ export const blogCards = [
     description:
       "Joining a Skype call? Learn how to create and use a virtual background in Skype with these four steps.",
     titleWidth: "w-[300px]",
+    author: {
+      name: "Sarah Lee",
+      designation: "Software Engineer",
+      imageUrl: "/images/blog/sarah.jpeg",
+    },
+    publishedDate: "1st February 2023",
+    readTime: "4 min read",
+    lastUpdatedDate: "16th June 2024",
+    newsPlace: "Tokyo",
+    happenedDate: "31st January 2023",
   },
 ];

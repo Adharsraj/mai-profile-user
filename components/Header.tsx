@@ -18,7 +18,8 @@ const Header = () => {
     setOpen(false);
   }, [pathname]);
 
-  const isBlogInner = pathname === "/bloginner";
+  // Determine if we are on the BlogInner page
+  const isBlogInner = pathname.startsWith("/blog/") && pathname.split("/").length > 2;
 
   return (
     <div className={`relative font-concord font-normal ${isBlogInner ? "bg-transparent" : "bg-primary-blue"}`}>
@@ -52,7 +53,7 @@ const Header = () => {
             </ul>
           </Link>
           <Link href="/blog" passHref>
-            <ul className={`cursor-pointer py-3 ${pathname === "/blog" ? "text-primary-yellow" : ""}`}>
+            <ul className={`cursor-pointer py-3 ${pathname.startsWith("/blog") && pathname.split("/").length === 2 ? "text-primary-yellow" : ""}`}>
               blog
             </ul>
           </Link>
@@ -114,7 +115,7 @@ const Header = () => {
                 <Button className="uppercase border bg-primary-yellow w-full font-normal h-12 mb-2">
                   Create your card
                 </Button>
-                <Button className="bg-transparent border border-primary-blue text-primary-blue uppercase w-full  font-normal h-12 mb-2">
+                <Button className="bg-transparent border border-primary-blue text-primary-blue uppercase w-full font-normal h-12 mb-2">
                   Login
                 </Button>
               </div>

@@ -153,7 +153,7 @@ const InnerBlog: React.FC = () => {
                         <div key={index} className="text-center">
                             <img src={item.imgSrc} alt={item.imgAlt} className="w-full h-auto rounded-lg" />
                             <h3 className={`text-sm sm:text-md ${item.titleWidth} font-bold mx-auto mt-2`}>{item.title}</h3>
-                            <p className="text-black-600 text-xs sm:text-sm mb-4 mt-6">{item.description}</p>
+                            <p className="text-black-600 text-xs sm:text-sm mb-4 mt-4">{item.description}</p>
                         </div>
                     ))}
                 </div>
