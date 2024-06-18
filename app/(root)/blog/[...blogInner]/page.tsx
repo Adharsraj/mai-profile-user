@@ -1,22 +1,27 @@
-"use client";
+"use client"
 import React from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { blogCards } from "@/constants/BlogData";
-import Link from 'next/link';
 import { MaxWidthWrapper } from '@/components/ui/MaxWidthWrapper';
 
-const BlogInner: React.FC = () => {
-    const params = useParams();
-    const blogInner = params.blogInner as string[];
-    const cardData = blogCards.find((m) => m.id === blogInner[0]);
+const BlogInner = () => {
+    const { blogInner } = useParams();
+    const slug = blogInner?.[0]; 
+
+    const cardData = blogCards.find((cardData) => cardData.slug === slug);
 
     if (!cardData) {
-        return <div>Blog post not found</div>;
+        return (
+            <div className="container mx-auto px-4 py-8">
+                <MaxWidthWrapper>
+                    <h1 className="text-2xl sm:text-2xl font-bold my-4">Blog post not found</h1>
+                </MaxWidthWrapper>
+            </div>
+        );
     }
 
-    // Filter out the current card and limit to 3 cards
-    const relatedCards = blogCards.filter((m) => m.id !== cardData.id).slice(0, 3);
+    const relatedCards = blogCards.filter((cardData) => cardData.slug !== slug).slice(0, 3);
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -25,11 +30,10 @@ const BlogInner: React.FC = () => {
                 <h1 className="text-2xl sm:text-2xl font-bold my-4">{cardData.title}</h1>
                 <div className="flex items-center my-4">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                        <Image
+                        <img
                             src={cardData.author.imageUrl}
                             alt={cardData.author.name}
-                            layout="fill"
-                            objectFit="cover"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                     <div className="ml-3">
@@ -44,11 +48,9 @@ const BlogInner: React.FC = () => {
                     <p className='text-xs sm:text-sm'>Last Updated: {cardData.lastUpdatedDate}</p>
                 </div>
                 <div className="mb-4">
-                    <Image
+                    <img
                         src={cardData.imgSrc}
                         alt={cardData.imgAlt}
-                        width={1200}
-                        height={675}
                         className="w-full lg:w-[1200px] h-auto rounded-lg"
                     />
                 </div>
@@ -79,14 +81,13 @@ const BlogInner: React.FC = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {relatedCards.map((cardData) => (
-                        <div key={cardData.id} className="text-center">
-                            <Link href={`/blog/${cardData.id}`}>
+                    {relatedCards.map((relatedCard) => (
+                        <div key={relatedCard.slug} className="text-center">
+                            <Link href={`/blog/${relatedCard.slug}`}>
                                 <div className="cursor-pointer block">
-                                    <img src={cardData.imgSrc} alt={cardData.imgAlt} className="w-full h-auto rounded-lg" />
-                                    <h3 className={`text-md sm:text-xs ${cardData.titleWidth} font-bold mx-auto mt-2`}>{cardData.title}</h3>
-                                    <h3 className={`text-sm mt-2`}>{cardData.description}</h3>
-                                    
+                                    <img src={relatedCard.imgSrc} alt={relatedCard.imgAlt} className="w-full h-auto rounded-lg" />
+                                    <h3 className={`text-md sm:text-xs ${relatedCard.titleWidth} font-bold mx-auto mt-2`}>{relatedCard.title}</h3>
+                                    <h3 className={`text-sm mt-2`}>{relatedCard.description}</h3>
                                 </div>
                             </Link>
                         </div>

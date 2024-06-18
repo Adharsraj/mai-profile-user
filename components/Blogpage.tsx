@@ -37,13 +37,13 @@ const Blogpage: React.FC = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogCards.map((item, index) => (
+          {blogCards.map((cardData, index) => (
             <div key={index} className="text-center">
-              <Link href={`/blog/${item.id}`}>
+              <Link href={`/blog/${cardData.slug}`}>
                 <div className="cursor-pointer block">
-                  <img src={item.imgSrc} alt={item.imgAlt} className="w-full h-auto rounded-lg" />
-                  <h3 className={`text-md sm:text-md ${item.titleWidth} font-bold mx-auto mt-2`}>{item.title}</h3>
-                  <h3 className={`text-md sm:text-sm mx-auto mt-2`}>{item.description}</h3>
+                  <img src={cardData.imgSrc} alt={cardData.imgAlt} className="w-full h-auto rounded-lg" />
+                  <h3 className={`text-md sm:text-md ${cardData.titleWidth} font-bold mx-auto mt-2`}>{cardData.title}</h3>
+                  <h3 className={`text-md sm:text-sm mx-auto mt-2`}>{cardData.description}</h3>
                 </div>
               </Link>
             </div>

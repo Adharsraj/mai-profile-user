@@ -1,6 +1,6 @@
 export const blogCards = [
   {
-    id: "0",
+    slug: "mai-profile-news-letter-2024",
     imgSrc: "/Images/blog/grid1.svg",
     imgAlt: "Grid 1",
     title: "Mai Profile News Letter 2024",
@@ -19,7 +19,7 @@ export const blogCards = [
     happenedDate: "15th June 2023",
   },
   {
-    id: "1",
+    slug: "What-is-the-correct-approach-to-Business-Networking?",
     imgSrc: "/Images/blog/grid2.svg",
     imgAlt: "Grid 2",
     title: "What is the correct approach to Business Networking?",
@@ -38,7 +38,7 @@ export const blogCards = [
     happenedDate: "11th May 2023",
   },
   {
-    id: "2",
+    slug: "How-to-Create-a-Virtual-Background",
     imgSrc: "/Images/blog/grid3.svg",
     imgAlt: "Grid 3",
     title: "How to Create a Virtual Background",
@@ -57,7 +57,7 @@ export const blogCards = [
     happenedDate: "9th April 2023",
   },
   {
-    id: "3",
+    slug: "Want-to-meet-people-faster?-Use-this-QR-code-Generator-and-Reader",
     imgSrc: "/Images/blog/grid4.svg",
     imgAlt: "Grid 4",
     title: "Want to meet people faster? Use this QR code Generator and Reader",
@@ -76,7 +76,7 @@ export const blogCards = [
     happenedDate: "7th March 2023",
   },
   {
-    id: "4",
+    slug: "How-To-Use-a-Virtual-Background-With-Skype",
     imgSrc: "/Images/blog/grid5.svg",
     imgAlt: "Grid 5",
     title: "How To Use a Virtual Background With Skype",
