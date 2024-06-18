@@ -1,101 +1,175 @@
-"use client"
-import React from 'react';
-import Link from 'next/link';
-import { useParams } from 'next/navigation';
+"use client";
+import React, { useEffect } from "react";
+import Image from "next/image";
+import { useParams, usePathname } from "next/navigation";
 import { blogCards } from "@/constants/BlogData";
-import { MaxWidthWrapper } from '@/components/ui/MaxWidthWrapper';
 
-const BlogInner = () => {
-    const { blogInner } = useParams();
-    const slug = blogInner?.[0]; 
+import Link from "next/link";
+import { MaxWidthWrapper } from "@/components/ui/MaxWidthWrapper";
+import { SignupFormDemo } from "@/components/ContactForm";
+import { ArrowLeft } from "lucide-react";
+import { truncateTitle } from "@/lib/textChanger";
+import { useRouter } from "next/navigation";
 
-    const cardData = blogCards.find((cardData) => cardData.slug === slug);
+const BlogInner: React.FC = () => {
+  const router = useRouter();
+  const { blogInner } = useParams();
+ const slugData=blogInner?.[0].split("%20").join(' ')
+const cardData = blogCards.find((cardData) => cardData.title.replace(/\?/g, '') === slugData);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-    if (!cardData) {
-        return (
-            <div className="container mx-auto px-4 py-8">
-                <MaxWidthWrapper>
-                    <h1 className="text-2xl sm:text-2xl font-bold my-4">Blog post not found</h1>
-                </MaxWidthWrapper>
-            </div>
-        );
+  if (!cardData) {
+    return <div>Blog post not found</div>;
+  }
+
+  // Filter out the current card and limit to 3 cards
+  const relatedCards = blogCards
+    .filter((m) => m.id !== cardData.id)
+    .slice(0, 3);
+
+  const renderPassages = (cardData: any) => {
+    const passages = [];
+    let i = 1;
+    while (cardData[`passage${i}`]) {
+      passages.push(
+        <p
+          key={i}
+          className="text-[10px] opacity-50 mt-4 md:text-xs lg:text-base xl:text-lg"
+        >
+          {cardData[`passage${i}`]}
+        </p>
+      );
+      i++;
     }
+    return passages;
+  };
+  return (
+    <>
+      <div className="py-8">
+        <MaxWidthWrapper>
+          <div
+            onClick={() => router.back()}
+            className="flex gap-2 text-primary-yellow  cursor-pointer w-["
+          >
+            <span className=" text-primary-yellow">
+              <ArrowLeft />
+            </span>
+            <span>Back</span>
+          </div>
+          <h1 className="text-2xl sm:text-2xl font-medium mt-4 mb-3  lg:text-5xl">
+            {cardData.title}
+          </h1>
+          <div className="md:w-[80%] xl:w-[72%]">
+            <div className=" space-y-2 ">
+              <p className="text-[10px] opacity-60 md:text-xs lg:text-sm ">
+                <span className="lg:font-medium lg:opacity-100 lg:text-black lg:text-lg">
+                  Originally Published:
+                </span>{" "}
+                {cardData.happenedDate} - {cardData.readTime}{" "}
+              </p>{" "}
+              <p className=" text-[10px] opacity-60 md:text-xs lg:text-sm">
+                Last Updated: {cardData.lastUpdatedDate}
+              </p>
+            </div>
+            <div className="flex items-center my-4">
+              <Image
+                src={cardData.author.imageUrl}
+                alt={cardData.author.name}
+                width={40}
+                className="rounded-full lg:w-12 lg:h-12"
+                height={40}
+              />
+              <div className="ml-3 text-xs lg:text-sm">
+                <p className="  opacity-60">By {cardData.author.name}</p>
+                <p className="opacity-60 text-xs">
+                  {cardData.author.designation}
+                </p>
+              </div>
+            </div>
 
-    const relatedCards = blogCards.filter((cardData) => cardData.slug !== slug).slice(0, 3);
+            <div className="mb-4">
+              <Image
+                src={cardData.imgSrc}
+                alt={cardData.imgAlt}
+                width={400}
+                height={400}
+                className="md:w-full md:h-[230px] md:object-cover md:object-top lg:h-[400px] xl:mt-8"
+              />
+            </div>
 
-    return (
-        <div className="container mx-auto px-4 py-8">
-            <MaxWidthWrapper>
-                <h2 className="text-sm sm:text-base text-gray-500">Blog</h2>
-                <h1 className="text-2xl sm:text-2xl font-bold my-4">{cardData.title}</h1>
-                <div className="flex items-center my-4">
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                        <img
-                            src={cardData.author.imageUrl}
-                            alt={cardData.author.name}
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="ml-3">
-                        <p className="text-xs sm:text-sm text-gray-600">By {cardData.author.name}</p>
-                        <p className="text-xs sm:text-sm text-gray-500">{cardData.author.designation}</p>
-                    </div>
-                </div>
-                <div className="text-gray-600 my-2">
-                    <p className='text-xs sm:text-sm'>
-                        <span className="font-bold text-xs sm:text-sm">Originally Published: </span> {cardData.publishedDate} - {cardData.readTime}
-                    </p>
-                    <p className='text-xs sm:text-sm'>Last Updated: {cardData.lastUpdatedDate}</p>
-                </div>
-                <div className="mb-4">
+            <div className="leading-3 lg:mt-10">
+              <span className="uppercase text-xs font-bold md:text-sm lg:text-base">
+                {cardData.publishedDate}-
+              </span>
+              <span className="text-[10px] opacity-50 md:text-xs lg:text-base xl:text-lg">
+                {cardData.passageMain}
+              </span>
+              {renderPassages(cardData)}
+            </div>
+            <div className="text-center mt-8">
+              <p className="text-xs mb-2 lg:text-base">
+                Don't forget to share the post
+              </p>
+              <div className="flex justify-center gap-4 mb-8">
+                <Image
+                  src="/images/extras/linkedin.svg"
+                  alt="LinkedIn"
+                  width={20}
+                  height={20}
+                />
+                <Image
+                  src="/images/extras/xlogo.svg"
+                  alt="Twitter"
+                  width={20}
+                  height={20}
+                />
+                <Image
+                  src="/images/extras/fblogo.svg"
+                  alt="Facebook"
+                  width={20}
+                  height={20}
+                />
+              </div>
+            </div>
+          </div>
+
+          <p className="text-xl font-medium lg:text-3xl xl:text-[40px]">
+            Keep Reading ...
+          </p>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 py-5  px-4 xl:px-0 xl:gap-16 ">
+            {relatedCards.map((item, index) => (
+              <div
+                key={index}
+                className="text-center pt-6 md:pt-3  relative z-30 bg-white "
+              >
+                <Link href={`/blog/${index}`}>
+                  {/* Using a styled <div> as a wrapper */}
+                  <div className="cursor-pointer">
                     <img
-                        src={cardData.imgSrc}
-                        alt={cardData.imgAlt}
-                        className="w-full lg:w-[1200px] h-auto rounded-lg"
+                      src={item.imgSrc}
+                      alt={item.imgAlt}
+                      className="w-full h-auto "
                     />
-                </div>
-                <div className="mb-4">
-                    <p className="text-gray-700 text-sm sm:text-sm leading-relaxed mb-4">
-                        <span className='font-bold text-[15px]'>{cardData.newsPlace}, {cardData.happenedDate} - </span>
-                        {cardData.description}
+                    <h3 className={`text-xl px-4 md:h-[60px] md:mt-6`}>
+                      {truncateTitle(item.title, 10)}
+                    </h3>
+                    <p className=" mb-4  opacity-60 mt-6 text-[10px] leading-3 xl:text-xs ">
+                      {truncateTitle(item.passageMain, 20)}
                     </p>
-                </div>
-                <div className="text-center mt-8">
-                    <p className="text-sm sm:text-lg font-semibold mb-4">Don't forget to share the post</p>
-                    <div className="flex justify-center gap-4 mb-8">
-                        <img
-                            src="/images/extras/linkedin.svg"
-                            alt="LinkedIn"
-                            className="w-8 h-8"
-                        />
-                        <img
-                            src="/images/extras/xlogo.svg"
-                            alt="Twitter"
-                            className="w-8 h-8"
-                        />
-                        <img
-                            src="/images/extras/fblogo.svg"
-                            alt="Facebook"
-                            className="w-8 h-8"
-                        />
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {relatedCards.map((relatedCard) => (
-                        <div key={relatedCard.slug} className="text-center">
-                            <Link href={`/blog/${relatedCard.slug}`}>
-                                <div className="cursor-pointer block">
-                                    <img src={relatedCard.imgSrc} alt={relatedCard.imgAlt} className="w-full h-auto rounded-lg" />
-                                    <h3 className={`text-md sm:text-xs ${relatedCard.titleWidth} font-bold mx-auto mt-2`}>{relatedCard.title}</h3>
-                                    <h3 className={`text-sm mt-2`}>{relatedCard.description}</h3>
-                                </div>
-                            </Link>
-                        </div>
-                    ))}
-                </div>
-            </MaxWidthWrapper>
-        </div>
-    );
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </MaxWidthWrapper>
+      </div>
+      <div className="bg-primary-blue">
+        <SignupFormDemo />
+      </div>
+    </>
+  );
 };
 
 export default BlogInner;

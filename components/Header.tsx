@@ -25,7 +25,7 @@ const Header = () => {
     <div className={`relative font-concord font-normal ${isBlogInner ? "bg-transparent" : "bg-primary-blue"}`}>
       <div className="flex justify-between relative items-center px-2 max-w-[1400px] mx-auto pt-3 md:pt-6 pb-4 lg:px-[10vw] md:px-[5vw]">
         <div className="flex items-center gap-1">
-          <div onClick={() => setOpen(!open)} className="lg:hidden z-30">
+          <div onClick={() => setOpen(!open)} className={`lg:hidden z-30 bg-primary-blue rounded-full`}>
             <AnimatedHamburgerButton open={open} />
           </div>
           <Image
