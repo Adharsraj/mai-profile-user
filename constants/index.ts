@@ -108,3 +108,43 @@ export const ourValues=[
      ],
    },
  ];
+
+ export const templatedata2 = [
+   {
+     name: "Jennifer John",
+     designation: "UI/UX Designer",
+     about: "Developing intuitive and engaging user interfaces for digital purposes.",
+     email: "jenniferjohn12@gmail.com",
+     mobile: "+91 8489898398",
+     website: "www.jennifer.com",
+     linkedin: "Jennifer John",
+     aboutme: "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design.",
+     servicesOffered: ["Web Design", "Mobile App Design", "Brand Identity"],
+     education: ["SSLC", "Plus Two In Computer Science", "Diploma In DPSE", "Diploma in UiUx Design"],
+     certifications: [
+       { year: "2020", institute: "Design Institute", certification: "Certified UX Designer" },
+       { year: "2018", institute: "Tech University", certification: "Certified Web Developer" },
+     ],
+     achievements: "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design.",
+     languages: ["Hindi", "English", "Malayalam", "Tamil"],
+     hobbies: ["Gaming", "Swimming", "Reading", "Dancing"],
+     recentWorks: [
+       {
+         image: "/Images/templates/proj2.svg",
+         projectName: "Project Name",
+         details: "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design",
+       },
+       {
+         image: "/Images/templates/proj1.svg",
+         projectName: "Project Name",
+         details: "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design",
+       },
+       {
+         image: "/Images/templates/proj3.svg",
+         projectName: "Project Name",
+         details: "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design",
+       },
+     
+     ],
+   },
+ ];

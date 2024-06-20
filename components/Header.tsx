@@ -20,8 +20,9 @@ const Header = () => {
 
   // Determine if we are on the BlogInner page
   const isBlogInner = pathname.startsWith("/blog/") && pathname.split("/").length > 2;
-  if (pathname === '/template1') {
+  if (pathname === '/template1' || pathname === '/template2') {
     return null;
+  } else {
   }
 
   return (

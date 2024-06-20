@@ -6,6 +6,7 @@ import phoneIcon from "../public/Images/footer/phone-call.svg";
 import { rings } from "@/constants/SvgComponents";
 
 const Footer = () => {
+  
   return (
     <div className="relative">
 
