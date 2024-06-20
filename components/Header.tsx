@@ -20,6 +20,9 @@ const Header = () => {
 
   // Determine if we are on the BlogInner page
   const isBlogInner = pathname.startsWith("/blog/") && pathname.split("/").length > 2;
+  if (pathname === '/template1') {
+    return null;
+  }
 
   return (
     <div className={`relative font-concord font-normal ${isBlogInner ? "bg-transparent" : "bg-primary-blue"}`}>
