@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { templatedata } from '../../../constants';
-import { MaxWidthWrapper } from '@repo/ui/components/MaxWidthWrapper';
+import { MaxWidthWrapper } from '@/components/ui/MaxWidthWrapper';
 
 const TemplatePage: React.FC = () => {
   const data = templatedata[0];
@@ -22,7 +22,7 @@ const TemplatePage: React.FC = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault();   
     console.log('Form data:', formData);
   };
 

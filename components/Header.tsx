@@ -61,6 +61,11 @@ const Header = () => {
               blog
             </ul>
           </Link>
+          <Link href="/template" passHref>
+            <ul className={`cursor-pointer py-3 ${pathname.startsWith("/blog") && pathname.split("/").length === 2 ? "text-primary-yellow" : ""}`}>
+              template
+            </ul>
+          </Link>
         </div>
 
         <div className="flex justify-between items-center gap-2">

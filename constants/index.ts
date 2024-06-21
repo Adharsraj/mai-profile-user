@@ -71,6 +71,7 @@ export const ourValues=[
  ];
  export const templatedata = [
    {
+     img:"/Images/templates/dp1.svg",
      name: "Arun C",
      designation: "UI/UX Designer",
      about: "Developing intuitive and engaging user interfaces for digital purposes.",
@@ -111,6 +112,7 @@ export const ourValues=[
 
  export const templatedata2 = [
    {
+     img:"/Images/templates/dp1.svg",
      name: "Jennifer John",
      designation: "UI/UX Designer",
      about: "Developing intuitive and engaging user interfaces for digital purposes.",
