@@ -10,6 +10,7 @@ export const templatedata = {
   mobile: "+91 7994185674",
   website: "www.arunc.com",
   linkedin: "Arun C",
+  
   aboutme:
     "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design.",
   servicesOffered: ["Web Design", "Mobile App Design", "Brand Identity"],
