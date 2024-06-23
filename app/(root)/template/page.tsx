@@ -9,7 +9,8 @@ import React from "react";
       </Link>
       
       <Link href="template/2">
-        <div className="bg-yellow-600 p-5">template2</div>
+        <div className="bg-yellow-600 text-yellow-600 p-5">template2</div>
+        {/* <div className="text-yellow-600 p-5">template2</div> */}
       </Link>
     </div>
   );

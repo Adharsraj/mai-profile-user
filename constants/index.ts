@@ -117,7 +117,7 @@ export const ourValues=[
      designation: "UI/UX Designer",
      about: "Developing intuitive and engaging user interfaces for digital purposes.",
      email: "jenniferjohn12@gmail.com",
-     mobile: "+91 8489898398",
+     mobile: "+91 9839884898",
      website: "www.jennifer.com",
      linkedin: "Jennifer John",
      aboutme: "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design.",

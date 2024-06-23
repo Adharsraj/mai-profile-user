@@ -10,7 +10,7 @@ export const templatedata = {
   mobile: "+91 7994185674",
   website: "www.arunc.com",
   linkedin: "Arun C",
-  
+
   aboutme:
     "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design.",
   servicesOffered: ["Web Design", "Mobile App Design", "Brand Identity"],
@@ -38,44 +38,41 @@ export const templatedata = {
   hobbies: ["Gaming", "Swimming", "Reading", "Dancing"],
   recentWorks: [
     {
-      image: "/Images/templates/projects/red1.svg",
+      image: "/Images/templates/unsplash.svg",
       projectName: "Project Name",
-      details:
-        "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design",
+      details: "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design",
     },
     {
-      image: "/Images/templates/projects/red3.svg",
+      image: "/Images/templates/unsplash.svg",
       projectName: "Project Name",
-      details:
-        "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design",
+      details: "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design",
     },
     {
-      image: "/Images/templates/projects/red2.svg",
+      image: "/Images/templates/unsplash.svg",
       projectName: "Project Name",
-      details:
-        "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design",
+      details: "I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users and improving their experience through design",
     },
   ],
 };
 
 const items = [
   {
-    src: "/Images/templates/email.svg",
+    src: "/Images/templates/gmail.svg",
     alt: "Email Icon",
     data: templatedata.email,
   },
   {
-    src: "/Images/templates/mobile.svg",
+    src: "/Images/templates/mob.svg",
     alt: "Mobile Icon",
     data: templatedata.mobile,
   },
   {
-    src: "/Images/templates/website.svg",
+    src: "/Images/templates/language.svg",
     alt: "Website Icon",
     data: templatedata.website,
   },
   {
-    src: "/Images/templates/linked.svg",
+    src: "/Images/templates/linkd.svg",
     alt: "LinkedIn Icon",
     data: templatedata.linkedin,
   },
@@ -95,25 +92,30 @@ const TemplateOne = () => {
           alt="image"
           className="w-full h-[440px] lg:h-[640px] xl:h-[840px] object-cover object-bottom  rounded-t-lg md:rounded-none"
         />
-        <div className="absolute  right-2 left-2 top-2 xl:top-8 lg:right-14 lg:left-14 xl:left-28 xl:right-28 text-white">
-          <div className="   text-red-400 ">
+        <div className="absolute  right-2 left-2 top-2 xl:top-4 lg:right-14 lg:left-14 xl:left-28 xl:right-28 text-white">
+          <div className="text-red-400">
             <div className="flex justify-between w-full">
-              <Image
-                src="/Images/templates/company1.svg"
-                alt="companyLogo"
-                width={30}
-                height={50}
-                className="md:w-[35px] xl:w-[60px]"
-              />
-              <Image
-                src="/Images/templates/share.svg"
-                alt="shareLogo"
-                width={20}
-                height={30}
-                className="md:w-[25px] xl:w-[40px]"
-              />
+              <div className="flex items-center justify-center w-[50px] h-[50px] md:w-[60px] md:h-[60px] xl:w-[80px] xl:h-[80px]">
+                <Image
+                  src="/Images/templates/company1.svg"
+                  alt="companyLogo"
+                  width={30}
+                  height={30}
+                  className="md:w-[35px] xl:w-[60px]"
+                />
+              </div>
+              <div className="mt-3 bg-[#ED3834] rounded-full flex items-center justify-center w-[30px] h-[30px] md:w-[40px] md:h-[40px] xl:w-[40px] xl:h-[40px]">
+                <Image
+                  src="/Images/templates/shreic.svg"
+                  alt="share Icon"
+                  width={5}
+                  height={5}
+                  className="md:w-[15px] xl:w-[15px]"
+                />
+              </div>
             </div>
           </div>
+
           <div className="mt-5 md:mt-[-16px] xl:mt-[-36px]">
             <div className="flex justify-center items-center">
               <Image
@@ -140,22 +142,23 @@ const TemplateOne = () => {
                   products
                 </p>
               </div>
-
               <div>
-                <div className="flex items-center justify-center text-[10px] ">
+                <div className="flex items-center justify-center text-[10px]">
                   <div className="grid grid-cols-2 gap-x-4 gap-y-4 mt-4 md:grid-cols-4">
                     {items.map((item, index) => (
                       <div
                         key={index}
-                        className="flex justify-left md:justify-center items-center text-xs lg:text-base xl:text-lg gap-2"
+                        className="flex justify-left md:justify-center items-center text-xxs lg:text-base xl:text-lg gap-2"
                       >
-                        <Image
-                          src={item.src}
-                          alt={item.alt}
-                          width={32}
-                          height={20}
-                          className="xl:w-10"
-                        />
+                        <div className="rounded-full bg-red-500 p-1 flex items-center justify-center">
+                          <Image
+                            src={item.src}
+                            alt={item.alt}
+                            width={12}
+                            height={12}
+                            className="xl:w-6"
+                          />
+                        </div>
                         <span className="whitespace-nowrap">{item.data}</span>
                       </div>
                     ))}
@@ -179,28 +182,29 @@ const TemplateOne = () => {
           </p>
         </div>
 
-        <div className=" text-center mt-4 md:mt-10 lg:mt-14 xl:mt-20 xl:max-w-[650px] mx-auto">
-          <span className="border-b border-[#ED3834] text-[#ED3834] xl:text-[44px] md:text-[25px] text-xl font-medium lg:text-3xl  ">
+        <div className="text-center mt-4 md:mt-10 lg:mt-14 xl:mt-20 xl:max-w-[650px] mx-auto">
+          <span className="border-b border-[#ED3834] text-[#ED3834] xl:text-[44px] md:text-[25px] text-xl font-medium lg:text-3xl">
             Services Offered
           </span>
-          <div className="flex justify-around mt-2 xl:mt-5 ">
+          <div className="flex justify-around mt-2 xl:mt-5">
             {templatedata.servicesOffered.map((service, index) => (
               <div key={index} className="flex flex-col items-center m-2">
-                <Image
-                  src="/Images/templates/develop.svg"
-                  alt={`${service} Icon`}
-                  width={40}
-                  height={40}
-                  className="md:w-[50px] xl:w-[80px]"
-                />
-                <span className="text-[8px] md:text-lg xl:text-2xl   mt-3 font-bold lg:text-[14px]  ">
+                <div className="bg-[#ED3834] p-2 md:p-3 xl:p-4 flex items-center justify-center">
+                  <Image
+                    src="/Images/templates/brush.svg"
+                    alt={`${service} Icon`}
+                    width={40}
+                    height={40}
+                    className="md:w-[50px] xl:w-[80px]"
+                  />
+                </div>
+                <span className="text-[8px] md:text-lg xl:text-2xl mt-2 font-bold lg:text-[14px]">
                   {service}
                 </span>
               </div>
             ))}
           </div>
         </div>
-
         <div className=" text-center mt-4 md:mt-10 lg:mt-14 xl:mt-20   xl:max-w-[650px] mx-auto">
           <span className="border-b border-[#ED3834] text-[#ED3834] xl:text-[44px] md:text-[25px] text-xl font-medium lg:text-3xl  ">
             Education
